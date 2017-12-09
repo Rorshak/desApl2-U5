@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    <application>
+        <resource-bundle>
+            <base-name>utng.configuration.strings</base-name>
+            <var>str</var>
+        </resource-bundle>           
+    </application>
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>Index</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            
+            <from-outcome>Users</from-outcome>
+            <to-view-id>/users/list-users.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Roles</from-outcome>
+            <to-view-id>/roles/list-roles.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Modules</from-outcome>
+            <to-view-id>/modules/list-modules.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Position</from-outcome>
+            <to-view-id>/positions/list-positions.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Division</from-outcome>
+            <to-view-id>/division/list-divisions.xhtml</to-view-id>
+        </navigation-case>
+        <!-- Employee -->
+        <navigation-case>
+            <from-outcome>Employee</from-outcome>
+            <to-view-id>/employees/list-employees.xhtml</to-view-id>
+        </navigation-case>
+        <!-- Salario -->
+        <navigation-case>
+            <from-outcome>Salary</from-outcome>
+            <to-view-id>/salaries/list-salaries.xhtml</to-view-id>
+        </navigation-case>
+        <!-- Salir -->
+        <navigation-case>
+            <from-outcome>Salir</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <!-- MODULO USUARIOS-->
+    <navigation-rule>
+        <from-view-id>/users/form-users.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Save</from-outcome>
+            <to-view-id>/users/list-users.xhtml</to-view-id>
+        </navigation-case>
+          <navigation-case>
+            <from-outcome>Remove</from-outcome>
+            <to-view-id>/users/list-users.xhtml</to-view-id>
+        </navigation-case>
+          <navigation-case>
+            <from-outcome>Cancel</from-outcome>
+            <to-view-id>/users/list-users.xhtml</to-view-id>
+        </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+            <from-view-id>/users/list-users.xhtml</from-view-id>
+            <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/users/form-users.xhtml</to-view-id>
+            </navigation-case>
+            <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/users/form-users.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        <!-- MODULO ROLES-->
+        <navigation-rule>
+             <from-view-id>/roles/form-roles.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/roles/list-roles.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Remove</from-outcome>
+                <to-view-id>/roles/list-roles.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/roles/list-roles.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+             <from-view-id>/roles/list-roles.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/roles/form-roles.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/roles/form-roles.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        
+        
+        
+        
+        <!-- MODULO PUESTOS-->
+        
+     
+        <navigation-rule>
+             <from-view-id>/positions/form-positions.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/positions/list-positions.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Remove</from-outcome>
+                <to-view-id>/positions/list-positions.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/positions/list-positions.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+             <from-view-id>/positions/list-positions.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/positions/form-positions.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                 <from-outcome>Edit</from-outcome>
+                <to-view-id>/positions/form-positions.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <!-- MODULO DIVISION-->
+        <navigation-rule>
+             <from-view-id>/division/form-divisions.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/division/list-divisions.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Remove</from-outcome>
+                <to-view-id>/division/list-divisions.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/division/list-divisions.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+             <from-view-id>/division/list-divisions.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Iniciar</from-outcome>
+                <to-view-id>/division/form-divisions.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Editar</from-outcome>
+                <to-view-id>/division/form-divisions.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <!-- MODULO EMPLEADO-->
+         <navigation-rule>
+             <from-view-id>/employees/form-employees.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/employees/list-employees.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Remove</from-outcome>
+                <to-view-id>/employees/list-employees.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/employees/list-employees.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+             <from-view-id>/employees/list-employees.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/employees/form-employees.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/employees/form-employees.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <!-- MODULO SALARIO-->
+        <navigation-rule>
+             <from-view-id>/salaries/form-salaries.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/salaries/list-salaries.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Remove</from-outcome>
+                <to-view-id>/salaries/list-salaries.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/salaries/list-salaries.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+             <from-view-id>/salaries/list-salaries.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/salaries/form-salaries.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/salaries/form-salaries.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        <!-- MODULO MODULOS-->
+         <navigation-rule>
+             <from-view-id>/modules/form-modules.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Save</from-outcome>
+                <to-view-id>/modules/list-modules.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Remove</from-outcome>
+                <to-view-id>/modules/list-modules.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Cancel</from-outcome>
+                <to-view-id>/modules/list-modules.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+        <navigation-rule>
+             <from-view-id>/modules/list-modules.xhtml</from-view-id>
+             <navigation-case>
+                <from-outcome>Start</from-outcome>
+                <to-view-id>/modules/form-modules.xhtml</to-view-id>
+            </navigation-case>
+             <navigation-case>
+                <from-outcome>Edit</from-outcome>
+                <to-view-id>/modules/form-modules.xhtml</to-view-id>
+            </navigation-case>
+        </navigation-rule>
+        
+     
+     
+       <navigation-rule>
+         <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>Correcto</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>Incorrecto</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>  
+</faces-config>

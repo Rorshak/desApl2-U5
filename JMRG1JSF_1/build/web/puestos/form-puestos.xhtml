@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>#{str.positionFormTitle}</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="/templates/template.xhtml">
+            <ui:define name="contenido">
+                <h2>#{str.positionFormHeader}</h2>
+                <p:fieldset legend="#{str.positionLegendForm}">
+                <h:form>
+                    <p:panelGrid columns="1"> 
+                         <p:selectOneMenu value="#{positionBean.position.division.idDivision}">
+                                <f:selectItems value="#{positionBean.divisions}" var="d" 
+                                               itemLabel="#{d.nombre}" itemValue="#{d.idDivision}"></f:selectItems>                                     
+                            </p:selectOneMenu>   
+                        
+                    <p:inputText placeholder="#{str.positionNamePrompt}" value="#{positionBean.position.name}"></p:inputText>
+                     <p:inputText placeholder="#{str.positionAreaPrompt}" value="#{positionBean.position.area}"></p:inputText>
+                      <p:inputText placeholder="#{str.positionNivelPrompt}" value="#{positionBean.position.standard}"></p:inputText>
+                       <p:inputText placeholder="#{str.positionRangoPrompt}" value="#{positionBean.position.range}"></p:inputText>
+                    </p:panelGrid>
+                    <p:commandButton value="#{str.buttonSave}" action="#{posotionBean.save()}"></p:commandButton>
+                    <p:commandButton value="#{str.buttonDelete}" action="#{positionBean.remove()}"></p:commandButton>
+                    <p:commandButton value="#{str.buttonCancel}" action="#{positionBean.cancel()}"></p:commandButton>
+                </h:form>
+                </p:fieldset>
+            </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
